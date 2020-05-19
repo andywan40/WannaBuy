@@ -5,7 +5,6 @@ const middleware = require('../middleware');
 
 
 
-
 router.get("/list",middleware.isLoggedIn,  function(req, res){
 	Item.find({},function(err, itemsFound){
 		if (err || !itemsFound){
@@ -17,6 +16,12 @@ router.get("/list",middleware.isLoggedIn,  function(req, res){
 	})
 })
 
+//show create form 
+router.get("/list/new", middleware.isLoggedIn, (req, res) =>{
+	res.render("items/new");
+})
+
+//create
 router.post("/list",middleware.isLoggedIn, function(req, res){
 	//get data from form and add it to database;
 	//redirect back to "/list"
@@ -24,14 +29,16 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 	const brand = req.body.brand;
 	const year = req.body.year;
 	const retail = req.body.retail;
-	const image = req.body.image;
+	const front_image = req.body.front_image;
+	const back_image = req.body.back_image;
 	const description = req.body.description;
 	const obj = {
 		name: name,
 		brand: brand,
 		year: year,
 		retail: retail, 
-		image: image,
+		front_image: front_image,
+		back_image: back_image,
 		description: description
 	}
 	Item.create(obj, function(err, itemCreated){
@@ -43,10 +50,6 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 		}
 	})
 	
-})
-//show create form 
-router.get("/list/new", middleware.isLoggedIn, (req, res) =>{
-	res.render("items/new");
 })
 
 //show item

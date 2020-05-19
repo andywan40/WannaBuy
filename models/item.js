@@ -6,7 +6,8 @@ const itemSchema = new mongoose.Schema ({
 	brand: String,
 	year: String,
 	retail: String,
-	image: String,	
+	front_image: String,
+	back_image:String,
 	description: String
 });
 
