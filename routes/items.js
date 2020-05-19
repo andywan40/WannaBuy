@@ -55,7 +55,7 @@ router.get("/list/:id", middleware.isLoggedIn, (req,res) => {
 	Item.findById(req.params.id,function(err, itemFound){
 		if (err || !itemFound){
 			req.flash("error", "Item not found!");
-			res.redirect("items/show");
+			res.redirect("/list");
 		}else{
 			res.render("items/show", {item:itemFound})
 		}
@@ -66,7 +66,8 @@ router.get("/list/:id", middleware.isLoggedIn, (req,res) => {
 router.get("/list/:id/edit", middleware.isLoggedIn, (req, res) =>{
 	Item.findById(req.params.id, (err, itemFound) => {
 		if (err || !itemFound){
-			res.redirect("back")
+			req.flash("error", "Item not found!");
+			res.redirect("/list")
 		}else{
 			res.render("items/edit", {item:itemFound});
 		}
