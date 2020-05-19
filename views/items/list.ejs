@@ -1,0 +1,38 @@
+<%- include("../partials/header") %>
+
+
+
+
+<div class="container">
+	<h1 class="pagename text-center">
+	Shopping List
+	</h1>
+	
+	
+	<div class= "row">
+			<% items.forEach((item)=> { %>
+			<div class="col-md-4 text-center my-2">
+				<div class="img-thumbnail">
+					<img src="<%=item.image%>" class="img-fluid">
+					
+					<div class="caption">
+						<p>
+							<strong><%= item.name %> - <%= item.retail %></strong>
+						</p>
+						<p>
+							<%= item.brand %>/<%= item.year %>
+						</p>
+					</div>
+					<a href="/list/<%= item._id %>" class="btn btn-sm btn-primary mb-3">More Info</a>
+				</div>	
+			</div>
+			<% }) %>
+	</div>
+	<div class="">
+		<a href="/list/new" class="btn btn-lg btn-primary mt-3 mb-3">Add New Item</a>
+	</div>
+	
+
+</div>
+
+<%- include("../partials/footer") %>

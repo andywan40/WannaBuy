@@ -1,0 +1,29 @@
+<%- include("../partials/header") %>
+
+<div class="pagename text-center">
+	<h1>
+		Edit <%= item.name %>
+	</h1>
+</div>
+<div class="container">
+	<div class="row text-center justify-content-center">
+		
+		<div class="col-6">
+			<div>
+				<form action="/list/<%=item._id%>?_method=PUT" method="POST">
+					<input type="text" name="item[name]" value="<%=item.name%>" class="form-control rounded my-2 shadow-sm">
+					<input type="text" name="item[brand]" value="<%=item.brand%>" class="form-control rounded my-2 shadow-sm">
+					<input type="text" name="item[year]" value="<%=item.year%>" class="form-control rounded my-2 shadow-sm">
+					<input type="text" name="item[retail]" value="<%=item.retail%>" class="form-control rounded my-2 shadow-sm">
+					<input type="text" name="item[image]" value="<%=item.image%>" class="form-control rounded my-2 shadow-sm">
+					<input type="text" name="item[description]" value="<%=item.description%>" class="form-control rounded my-2 shadow-sm">
+					<input type="submit" class="btn btn-success btn-lg my-2">
+				</form>
+			</div>
+			<a href="/list/<%=item._id%>" class="btn btn-info mt-4">Go back</a>
+		</div>	
+	</div>
+</div>
+
+
+<%- include("../partials/footer") %>

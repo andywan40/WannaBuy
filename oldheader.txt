@@ -1,0 +1,28 @@
+<!-- <%- include("partials/header") %>
+<style>
+body{
+		 background-image:url('https://images.unsplash.com/photo-1534265618661-adfe32dfe515?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'); 
+		 background-size: cover; 
+		 background-position: center;
+		 background-repeat: no-repeat;
+}
+</style>
+
+
+<%- include("partials/footer") %> -->
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++new part
+
+
+ <!-- <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div> -->
