@@ -8,7 +8,9 @@ const itemSchema = new mongoose.Schema ({
 	retail: String,
 	front_image: String,
 	back_image:String,
-	description: String
+	description: String,
+	website: String
+	// bought: Boolean, default: false
 });
 
 module.exports = mongoose.model("Item", itemSchema);

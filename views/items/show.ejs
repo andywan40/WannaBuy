@@ -4,14 +4,14 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
 
-<div class="container">
+<div class="container" id="show" >
 	<div class="row text-center justify-content-center">
 	<div class="pl-2 pr-2">
 		
 			
 	
 	<h1 class="mt-2">
-		<strong><%= item.name %> - <%= item.retail %></strong>
+		<a href="<%=item.website%>" target="_blank"><strong><%= item.name %> - <%= item.retail %></strong></a>
 	</h1>
 	<h4>
 		<%=item.brand%>/<%=item.year%>
@@ -35,6 +35,12 @@
 	<form class="deletebtn" action="/list/<%=item._id%>?_method=DELETE" method="POST">
 		<button class ="btn btn-danger btn-sm my-3 mx-1">Delete</button>
 	</form>
+		<!-- <button class ="btn btn-primary btn-sm my-3 mx-1" id="boughtBtn">Bought</button> -->
+	<!-- <form  action="/list/<%=item._id%>/bought?_method=PUT" method="POST">
+		<button class ="btn btn-primary btn-sm my-3 mx-1" id="boughtBtn">Bought</button>
+	</form>	 -->
+	
+    
 	</div>
 	</div>
 </div>
@@ -50,6 +56,17 @@
 	}, function(){
 		$(this).attr("src", front );
 	});
+	
+	
+// 	$("#boughtBtn").click(function(){
+// 		<%=item.bought %> = true;
+// 		var bought = <%=item.bought %>;
+// 		console.log(bought);
+// 	});
+	
+	
+	
+	
 </script>
 
 	 

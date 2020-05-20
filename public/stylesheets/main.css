@@ -6,7 +6,7 @@
 }
  */
 .pagename {
-		text-shadow: 3px 3px 3px #797b7d;
+		text-shadow: 2px 2px 2px #797b7d;
 		color: black;
 	}
 .deletebtn{
@@ -22,3 +22,8 @@ body{
 	height: 100%;
 }
 
+
+.bought{
+	color: grey;
+	opacity: 0.5;
+}

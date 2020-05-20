@@ -39,7 +39,8 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 		retail: retail, 
 		front_image: front_image,
 		back_image: back_image,
-		description: description
+		description: description, 
+		website: website
 	}
 	Item.create(obj, function(err, itemCreated){
 		if (err){
@@ -88,6 +89,23 @@ router.put("/list/:id", (req, res)=> {
 		}
 	})
 })
+
+// //update bought
+// router.put("/list/:id/bought", (req, res)=> {
+// 	Item.findByIdAndUpdate(req.params.id, req.body.item , (err, itemUpdated) =>{
+// 		if (err){
+// 			res.redirect("back");
+// 		}else{
+// 			req.flash("success", "Successfully updated a new item!");
+// 			res.redirect("/list/" + req.params.id);
+// 		}
+// 	})
+// })
+
+
+
+
+
 
 //delete item
 router.delete("/list/:id", (req ,res)=> {
