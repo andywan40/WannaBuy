@@ -27,3 +27,29 @@ body{
 	color: grey;
 	opacity: 0.5;
 }
+
+#brandBtn {
+	color: white;
+	background-color: black;
+	font-size: 25px;
+	font-family: 'Piedra', cursive;
+	padding: 3px 6px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: black;
+}
+
+
+.btn {
+	font-family: 'Chelsea Market', cursive;
+}
+
+.top{
+	font-family: 'Bangers', cursive;
+	letter-spacing: 1px;
+}
+
+#desc{
+	font-family: 'Patrick Hand', cursive;
+}
