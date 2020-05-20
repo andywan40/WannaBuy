@@ -5,17 +5,25 @@
 		 background-repeat: no-repeat;
 }
  */
+#desc{
+	font-family: 'Patrick Hand', cursive;
+}
+
+#brandBtn {
+	color: white;
+	background-color: black;
+	font-size: 25px;
+	font-family: 'Piedra', cursive;
+	padding: 3px 6px;
+}
+
+
 .pagename {
 		text-shadow: 2px 2px 2px #797b7d;
 		color: black;
 	}
 .deletebtn{
 	display: inline;
-}
-
-body{
-    background-color: rgb(244,239,241);
-    background-color: radial-gradient(circle, rgba(244,239,241,1) 0%, rgba(238,174,202,1) 96%);	
 }
 
 .img-thumbnail {
@@ -28,13 +36,7 @@ body{
 	opacity: 0.5;
 }
 
-#brandBtn {
-	color: white;
-	background-color: black;
-	font-size: 25px;
-	font-family: 'Piedra', cursive;
-	padding: 3px 6px;
-}
+
 
 .navbar-light .navbar-nav .nav-link {
 	color: black;
@@ -48,8 +50,15 @@ body{
 .top{
 	font-family: 'Bangers', cursive;
 	letter-spacing: 1px;
+	font-size: 20px;
 }
 
-#desc{
-	font-family: 'Patrick Hand', cursive;
+.price {
+	color:#f05dce;
+}
+
+
+body{
+    background-color: rgb(244,239,241);
+    background-color: radial-gradient(circle, rgba(244,239,241,1) 0%, rgba(238,174,202,1) 96%);	
 }
