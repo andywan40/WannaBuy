@@ -32,6 +32,7 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 	const front_image = req.body.front_image;
 	const back_image = req.body.back_image;
 	const description = req.body.description;
+	const website = req.body.website;
 	const obj = {
 		name: name,
 		brand: brand,

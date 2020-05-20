@@ -9,7 +9,7 @@ const itemSchema = new mongoose.Schema ({
 	front_image: String,
 	back_image:String,
 	description: String,
-	website: String
+	website: {type: String, default: '#' }
 	// bought: Boolean, default: false
 });
 
