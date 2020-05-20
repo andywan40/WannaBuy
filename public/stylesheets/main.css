@@ -57,8 +57,66 @@
 	color:#f05dce;
 }
 
+.login {
+	width: 90px;
+}
+
+.signup {
+	width: 90px;
+}
+
+
+.username, .password {
+	width: 300px;
+	margin-left: 120px;
+}
+
+.username:focus , .password:focus{
+	border: 3px solid #65bdfc;
+	
+}
+
+.register-form {
+	max-width:450px;
+	margin: 0 auto;
+	padding: 45px 0;
+	border: 2px solid rgba(0,0,0,0.3);
+}
+
+
+.input-group-icon{
+	background-color:#d9dcde;
+	width:40px;
+	text-align: center;
+	
+}
+
+.register-form .fa {
+	font-size: 20px;
+	}
+
+.register-form .fa-paper-plane{
+	font-size: 19px;
+	}
+
+.form-group-signup {
+	
+}
+
+
+
+
+
+
+
+
+
 
 body{
     background-color: rgb(244,239,241);
     background-color: radial-gradient(circle, rgba(244,239,241,1) 0%, rgba(238,174,202,1) 96%);	
 }
+
+
+
+
