@@ -10,6 +10,7 @@ const itemSchema = new mongoose.Schema ({
 	back_image:String,
 	description: String,
 	website: {type: String, default: '#' },
+	type: String,
 	author: String
 	// bought: Boolean, default: false
 });

@@ -34,6 +34,7 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 	const back_image = req.body.back_image;
 	const description = req.body.description;
 	const website = req.body.website;
+	const type= req.body.type;
 	const author = req.user.username;
 	const obj = {
 		name: name,
@@ -44,6 +45,7 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 		back_image: back_image,
 		description: description, 
 		website: website,
+		type:type,
 		author:author
 	}
 	Item.create(obj, function(err, itemCreated){

@@ -15,10 +15,18 @@
 					<input type="text" name="brand" placeholder="brand name" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="year" placeholder="year" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="retail" placeholder="retail price" class="form-control rounded my-2 shadow-sm">
+					<input type="text" name="description" placeholder="description" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="front_image" placeholder="front image url" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="back_image" placeholder="back image url" class="form-control rounded my-2 shadow-sm">
-					<input type="text" name="description" placeholder="description" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="website" placeholder="website url" class="form-control rounded my-2 shadow-sm">
+					<select class="custom-select form-control rounded my-0 shadow-sm" name="type" required>
+						<option selected disabled value="">Choose...</option>
+						<option value="outwear">Outwear</option>
+						<option value="tops">Tops</option>
+						<option value="bottoms">Bottoms</option>
+						<option value="hats">Hats</option>
+						<option value="accessories">Accessories</option>	
+					</select>
 					<input type="submit" class="btn btn-success btn-lg my-2">
 				</form>
 			</div>
