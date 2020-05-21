@@ -5,11 +5,14 @@
 
 <div class="container">
 	<h1 class="pagename text-center mt-3">
-	Shopping Cart
+	Shopping Cart<i class="fas fa-shopping-bag mx-3"></i>
 	</h1>
 	
 	
 	<div class= "row">
+			<% if (items.length === 0) { %>
+				<h3 class="ml-3">Your cart is currently empty</h3>
+		    <% } %>
 			<% items.forEach((item)=> { %>
 		  	<div class="col-md-4 text-center my-2">
 				<div class="img-thumbnail">

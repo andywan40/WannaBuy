@@ -17,9 +17,11 @@
 	padding: 3px 6px;
 }
 
-
+#edititem{
+	color:#007bff;
+}
 .pagename {
-		text-shadow: 2px 2px 2px #797b7d;
+		text-shadow: 1px 1px 1px #797b7d;
 		color: black;
 	}
 .deletebtn{
@@ -42,6 +44,10 @@
 	color: black;
 }
 
+
+.navlinkhover {
+	font-size:17px;
+}
 
 .btn {
 	font-family: 'Chelsea Market', cursive;
@@ -99,23 +105,17 @@
 	font-size: 19px;
 	}
 
-.form-group-signup {
-	
-}
-
-
-
-
-
-
-
-
-
 
 body{
     background-color: rgb(244,239,241);
     background-color: radial-gradient(circle, rgba(244,239,241,1) 0%, rgba(238,174,202,1) 96%);	
 }
+
+h1{
+	font-family: 'Bangers', cursive;	
+}
+
+
 
 
 

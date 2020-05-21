@@ -26,20 +26,20 @@
 		<ul class="navbar-nav ml-auto">
 			<% if (!currentUser){ %>
 				<li class="nav-item">
-					<a class="nav-link mx-2" href="/login"><i class="fas fa-sign-in-alt"></i> Log in<span class="sr-only">(current)</span></a>
+					<a class="nav-link mx-3" href="/login"><i class="fas fa-sign-in-alt"></i> Log in<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link mx-2" href="/register"><i class="fas fa-user-plus"></i> Sign up</a>
+					<a class="nav-link mx-3" href="/register"><i class="fas fa-user-plus"></i> Sign up</a>
 				</li>
 			<% } else{ %>
 				<li class="nav-item">
-					<a class="nav-link mx-2" href="/list"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+					<a class="nav-link mx-3" href="#"><i class="fas fa-sign-in-alt"></i> Logged in as <%= currentUser.username%></a>
 		  		</li>
 				<li class="nav-item">
-					<a class="nav-link mx-2" href="#"><i class="fas fa-sign-in-alt"></i> Logged in as <%= currentUser.username%></a>
+					<a class="nav-link mx-3" href="/logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
 		  		</li>
 				<li class="nav-item">
-					<a class="nav-link mx-2" href="/logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
+					<a class="nav-link mx-3" href="/list"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
 		  		</li>
 			<% }%>
 		  
@@ -67,4 +67,12 @@
 			</div>
 		<%	} %>
 	</div>
+		
+	<script>
+		$(".nav-link").hover(function(){
+			$(this).toggleClass("navlinkhover");
+		}, function(){
+			$(this).toggleClass("navlinkhover");
+		})
+	</script>
 	

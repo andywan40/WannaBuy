@@ -6,7 +6,7 @@ const middleware = require('../middleware');
 
 
 router.get("/list",middleware.isLoggedIn,  function(req, res){
-	console.log(req.user.username);
+	//finds all the items that are associated with the user and shows them
 	Item.find({author: req.user.username},function(err, itemsFound){
 		if (err || !itemsFound){
 			console.log(err)
