@@ -13,7 +13,7 @@ const indexRoutes = require('./routes/index');
 const itemsRoutes = require('./routes/items');
 
 // console.log(process.env.DATABASEURL);
-let url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp";
+let url = process.env.DATABASEURL || "mongodb://localhost:27017/personal_project";
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true });
 //mongoose.connect("mongodb://localhost:27017/yelp_camp", {useNewUrlParser: true, useUnifiedTopology: true })
 const app = express();

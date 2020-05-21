@@ -6,7 +6,8 @@ const middleware = require('../middleware');
 
 
 router.get("/list",middleware.isLoggedIn,  function(req, res){
-	Item.find({},function(err, itemsFound){
+	console.log(req.user.username);
+	Item.find({author: req.user.username},function(err, itemsFound){
 		if (err || !itemsFound){
 			console.log(err)
 			res.redirect("home")
@@ -33,6 +34,7 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 	const back_image = req.body.back_image;
 	const description = req.body.description;
 	const website = req.body.website;
+	const author = req.user.username;
 	const obj = {
 		name: name,
 		brand: brand,
@@ -41,7 +43,8 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 		front_image: front_image,
 		back_image: back_image,
 		description: description, 
-		website: website
+		website: website,
+		author:author
 	}
 	Item.create(obj, function(err, itemCreated){
 		if (err){
