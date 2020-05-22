@@ -7,50 +7,62 @@
 		</h1>	
 </div>
 
-<div class="customcontainer">
+<div class="container">
 	
 	
 	
-	<div class="sidebar ml-2">
-		<div>
-			<div class="card">
-				<div class="card-header">
-					<a href="/list">ALL</a>
+	<div class="row">
+		
+		<div class="sidebar col-md-2">
+			<div>
+				<div class="card">
+					<div class="card-header">
+						<a href="/list">ALL</a>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item"><a href="#">Outwear</a></li>
+						<li class="list-group-item"><a href="#">Tops</a></li>
+						<li class="list-group-item"><a href="#">Bottoms</a></li>
+						<li class="list-group-item"><a href="#">Hats</a></li>
+						<li class="list-group-item"><a href="#">Accessories</a></li>
+					</ul>
 				</div>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item"><a href="#">Outwear</a></li>
-					<li class="list-group-item"><a href="#">Tops</a></li>
-					<li class="list-group-item"><a href="#">Bottoms</a></li>
-					<li class="list-group-item"><a href="#">Hats</a></li>
-					<li class="list-group-item"><a href="#">Accessories</a></li>
-				</ul>
-			</div>
-		</div>	
-	</div>
+			</div>	
+		</div>
+		
+		<div class="col-md-10">
+			<div id="content">
+				
+				<% if (items.length === 0) { %>
+					<h3 class="ml-3">Your cart is currently empty</h3>
+				<% } %>
+				
+				<div class="row">
+					<% items.forEach((item)=> { %>
+						<div class="img-thumbnail text-center col-md-5 my-2 mx-3">
+							<img src="<%=item.front_image%>" class="img-fluid">
+							<div class="caption top">
+								<p class>
+									<strong><%= item.name %> - <span class="price"><%= item.retail %></span></strong>
+								</p>
+								<p class="mt-0">
+									<%= item.brand %>/<%= item.year %>
+								</p>
+							</div>
+								<a href="/list/<%= item._id %>" class="btn btn-sm btn-primary mt-2 mb-3">More Info</a>
+						</div>
+					<% }) %>	
 	
-	<div id="content" class="ml-3">
+				</div>
+			</div>
+		</div>
+		
+	</div>
 		
 	
-		<% if (items.length === 0) { %>
-			<h3 class="ml-3">Your cart is currently empty</h3>
-		<% } %>
-
-		<% items.forEach((item)=> { %>	
-			<div class="img-thumbnail text-center">
-				<img src="<%=item.front_image%>" class="img-fluid">
-				<div class="caption top">
-					<p class="mt-3 mb-0">
-						<strong><%= item.name %> - <span class="price"><%= item.retail %></span></strong>
-					</p>
-					<p class="mt-0">
-						<%= item.brand %>/<%= item.year %>
-					</p>
-				</div>
-					<a href="/list/<%= item._id %>" class="btn btn-sm btn-primary mt-2 mb-3">More Info</a>
-			</div>
-		<% }) %>	
 	
-	</div>
+	
+	
 	
 	<div id="addnewitem">
 			<a href="/list/new" class="btn btn-lg btn-primary mt-3 mb-3">Add New Item</a>

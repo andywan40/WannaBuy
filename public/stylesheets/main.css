@@ -26,13 +26,13 @@
 }
 
 
-#content{
+/* #content{
 	margin-top: 20px;
     width: 80%;
     float: left;
     position: relative;
     z-index: 2;
-}
+} */
 
 .pagename {
 		text-shadow: 1px 1px 1px #797b7d;
@@ -42,10 +42,11 @@
 	display: inline;
 }
 
-.img-thumbnail{
+ .img-thumbnail{
 	width: 30%;
-	float: left;
-	margin: 6px 12px;
+	
+	margin: 0 auto;
+	
 }
 
 
@@ -121,26 +122,28 @@
 	font-size: 19px;
 	}
 
-.sidebar{
+/* .sidebar{
 	padding: 20px 10px 0px 10px;
     text-transform: uppercase;
     text-align: right;
     float: left;
     width: 15%;
 	
-}
+} */
 
 
 .sidebar a{
 	color:red;
 }
 
-.customcontainer{
+/* .customcontainer{
 	width: 100%;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;	
-}   
+}    */
+
+
 
 body{
     background-color: rgb(244,239,241);
