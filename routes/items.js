@@ -17,6 +17,26 @@ router.get("/list",middleware.isLoggedIn,  function(req, res){
 	})
 })
 
+router.get("/list/c/:category",middleware.isLoggedIn,  function(req, res){
+	//finds all the items that are associated with the user and shows them
+	console.log(req.params.category)
+	Item.find({author: req.user.username, type:req.params.category},function(err, itemsFound){
+		if (err || !itemsFound){
+			console.log(err)
+			res.redirect("back")
+		}else{
+			res.render("items/list", {items:itemsFound})
+		}
+	})
+})
+
+
+
+
+
+
+
+
 //show create form 
 router.get("/list/new", middleware.isLoggedIn, (req, res) =>{
 	res.render("items/new");
