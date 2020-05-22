@@ -116,18 +116,35 @@ router.put("/list/:id", (req, res)=> {
 	})
 })
 
-//update bought
+
+//update bought (can now click on bought btn again and undo it)
 router.put("/list/:id/bought", (req, res)=> {
-	Item.findByIdAndUpdate(req.params.id,{$set:{bought:true}} ,(err, itemUpdated) =>{
+	Item.findById(req.params.id,(err, itemFound) =>{
 		if (err){
 			res.redirect("back");
-		}else{
-			req.flash("success", "Successfully updated a new item!");
-			res.redirect("/list/" + req.params.id);
-		}
-	})
-})
-
+		}else{ //found the item
+			if(itemFound.bought === false){ //check if bought is false or true
+				Item.findByIdAndUpdate(req.params.id,{$set:{bought:true}}, (err, itemUpdated)=>{
+					if (err){
+						res.redirect("back");
+					}else{
+						req.flash("success", "Successfully updated a new item!");
+						res.redirect("/list/" + req.params.id);
+					}
+				});
+			}else{
+				Item.findByIdAndUpdate(req.params.id,{$set:{bought:false}}, (err, itemUpdated)=>{
+					if (err){
+						res.redirect("back");
+					}else{
+						req.flash("success", "Successfully updated a new item!");
+						res.redirect("/list/" + req.params.id);
+					}
+				});
+			};
+		}		
+	});
+});
 
 
 

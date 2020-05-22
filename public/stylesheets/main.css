@@ -136,7 +136,9 @@
 
 
 .sidebar a{
-	color:red;
+	color:black;
+	font-family: 'Nanum Pen Script', cursive;
+	font-size:25px;
 }
 
 /* .customcontainer{
