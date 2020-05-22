@@ -1,5 +1,6 @@
 <%- include("../partials/header") %>
 
+
 <div id="toptext">
 		<h1 class="pagename text-center mt-3">
 			Shopping Cart<i class="fas fa-shopping-bag mx-3"></i>
@@ -63,16 +64,27 @@
 		
 	</div>
 		
-	
-	
-	
-	
+
 	
 	<div id="addnewitem">
 			<a href="/list/new" class="btn btn-lg btn-primary mt-3 mb-3">Add New Item</a>
 	</div>
 	
 </div>
+
+
+<!-- <script>
+	var arr = <%= items %>
+	$(document).ready(function(){
+		$(arr).each(function(i){
+			$(this).hover(function(){
+				$(this).attr("src", this.back_image );
+			}, function(){
+				$(this).attr("src", this.front_image );
+			});	
+		});
+	});
+</script> -->
 
 
 

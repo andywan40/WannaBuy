@@ -10,7 +10,7 @@ body {
 	padding-top: 40vh;
 	color: white;
 	text-shadow: 3px 3px 3px grey;
-	font-family: 'Yatra One', cursive;
+	font-family: 'Rock Salt', cursive;
 }
 
 .slideshow { 
@@ -41,7 +41,7 @@ body {
 
 
 .slideshow li:nth-child(1) { 
-  background-image: url(https://images.unsplash.com/photo-1534265618661-adfe32dfe515?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60) 
+  background-image: url(https://images.unsplash.com/photo-1583696116202-7cba7ca0e3ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);  
 }
 .slideshow li:nth-child(2) { 
   background-image: url(https://images.unsplash.com/photo-1523398002811-999ca8dec234?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
@@ -52,7 +52,7 @@ body {
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(https://images.unsplash.com/photo-1583696116202-7cba7ca0e3ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+  background-image: url(https://images.unsplash.com/photo-1534265618661-adfe32dfe515?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
