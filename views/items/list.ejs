@@ -1,6 +1,5 @@
 <%- include("../partials/header") %>
 
-
 <div id="toptext">
 		<h1 class="pagename text-center mt-3">
 			Shopping Cart<i class="fas fa-shopping-bag mx-3"></i>
@@ -13,7 +12,7 @@
 	
 	<div class="row">
 		
-		<div class="sidebar col-md-2">
+		<div class="sidebar col-md-2 text-right">
 			<div>
 				<div class="card">
 					<div class="card-header">
@@ -39,18 +38,22 @@
 				
 				<div class="row">
 					<% items.forEach((item)=> { %>
-						<div class="img-thumbnail text-center col-md-5 my-2 mx-3">
-							<img src="<%=item.front_image%>" class="img-fluid">
-							<div class="caption top">
-								<p class>
-									<strong><%= item.name %> - <span class="price"><%= item.retail %></span></strong>
-								</p>
-								<p class="mt-0">
-									<%= item.brand %>/<%= item.year %>
-								</p>
+					
+							<div class="img-thumbnail text-center col-md-5 my-2 mx-3 <%if(item.bought===true){ %>
+										bought	
+										<% } %>">
+						
+								<img src="<%=item.front_image%>" class="img-fluid">
+								<div class="caption top">
+									<p class>
+										<strong><%= item.name %> - <span class="price"><%= item.retail %></span></strong>
+									</p>
+									<p class="mt-0">
+										<%= item.brand %>/<%= item.year %>
+									</p>
+								</div>
+									<a href="/list/<%= item._id %>" class="btn btn-sm btn-primary mt-2 mb-3">More Info</a>
 							</div>
-								<a href="/list/<%= item._id %>" class="btn btn-sm btn-primary mt-2 mb-3">More Info</a>
-						</div>
 					<% }) %>	
 	
 				</div>
@@ -71,7 +74,6 @@
 </div>
 
 
-	
 
 	
 

@@ -19,7 +19,7 @@ router.get("/list",middleware.isLoggedIn,  function(req, res){
 
 router.get("/list/c/:category",middleware.isLoggedIn,  function(req, res){
 	//finds all the items that are associated with the user and shows them
-	console.log(req.params.category)
+	
 	Item.find({author: req.user.username, type:req.params.category},function(err, itemsFound){
 		if (err || !itemsFound){
 			console.log(err)
@@ -116,17 +116,17 @@ router.put("/list/:id", (req, res)=> {
 	})
 })
 
-// //update bought
-// router.put("/list/:id/bought", (req, res)=> {
-// 	Item.findByIdAndUpdate(req.params.id, req.body.item , (err, itemUpdated) =>{
-// 		if (err){
-// 			res.redirect("back");
-// 		}else{
-// 			req.flash("success", "Successfully updated a new item!");
-// 			res.redirect("/list/" + req.params.id);
-// 		}
-// 	})
-// })
+//update bought
+router.put("/list/:id/bought", (req, res)=> {
+	Item.findByIdAndUpdate(req.params.id,{$set:{bought:true}} ,(err, itemUpdated) =>{
+		if (err){
+			res.redirect("back");
+		}else{
+			req.flash("success", "Successfully updated a new item!");
+			res.redirect("/list/" + req.params.id);
+		}
+	})
+})
 
 
 

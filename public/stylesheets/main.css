@@ -25,6 +25,9 @@
 	margin-left: 225px;
 }
 
+#boughtBtn{
+	display: inline;
+}
 
 /* #content{
 	margin-top: 20px;
@@ -50,10 +53,10 @@
 }
 
 
-/* .bought{
+ .bought{
 	color: grey;
 	opacity: 0.5;
-} */
+}
 
 
 

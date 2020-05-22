@@ -36,9 +36,9 @@
 		<button class ="btn btn-danger btn-sm my-3 mx-1">Delete</button>
 	</form>
 		<!-- <button class ="btn btn-primary btn-sm my-3 mx-1" id="boughtBtn">Bought</button> -->
-	<!-- <form  action="/list/<%=item._id%>/bought?_method=PUT" method="POST">
-		<button class ="btn btn-primary btn-sm my-3 mx-1" id="boughtBtn">Bought</button>
-	</form>	 -->
+	<form  action="/list/<%=item._id%>/bought?_method=PUT" method="POST" id="boughtBtn">
+		<button class ="btn btn-primary btn-sm my-3 mx-1">Bought</button>
+	</form>
 	
     
 	</div>
@@ -57,13 +57,7 @@
 		$(this).attr("src", front );
 	});
 	
-	
-// 	$("#boughtBtn").click(function(){
-// 		<%=item.bought %> = true;
-// 		var bought = <%=item.bought %>;
-// 		console.log(bought);
-// 	});
-	
+
 	
 	
 	
