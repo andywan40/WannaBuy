@@ -16,7 +16,7 @@
 	</head>
 	<body>
 		
-		<nav class="navbar navbar-expand-md navbar-light bg-light">
+		<nav class="navbar navbar-expand-md navbar-light">
 	  <a class="navbar-brand" href="/"><button class="btn btn-lg" id="brandBtn">WANNABUY</button></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -33,13 +33,26 @@
 				</li>
 			<% } else{ %>
 				<li class="nav-item">
-					<a class="nav-link mx-3" href="#"><i class="fas fa-sign-in-alt"></i> Logged in as <%= currentUser.username%></a>
+					<a class="nav-link mx-1 mt-1 p-0" id="loginas" href="#">
+						<button class="btn btn-sm navbtn">
+							<i class="fas fa-sign-in-alt"></i>
+							Logged in as <%= currentUser.username%>
+						</button>
+					</a>
 		  		</li>
 				<li class="nav-item">
-					<a class="nav-link mx-3" href="/logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
+					<a class="nav-link mx-1 mt-1 p-0" href="/logout">
+						<button class="btn btn-sm navbtn">
+							<i class="fas fa-sign-out-alt"></i>	
+						</button>	
+					</a>
 		  		</li>
 				<li class="nav-item">
-					<a class="nav-link mx-3" href="/list"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+					<a class="nav-link mx-1 mt-1 p-0" href="/list">
+						<button class="btn btn-sm navbtn">
+							<i class="fas fa-shopping-cart"></i>
+						</button>
+					</a>
 		  		</li>
 			<% }%>
 		  
@@ -69,10 +82,10 @@
 	</div>
 		
 	<script>
-		$(".nav-link").hover(function(){
-			$(this).toggleClass("navlinkhover");
+		$(".navbtn").hover(function(){
+			$(this).toggleClass("navbtnhover");
 		}, function(){
-			$(this).toggleClass("navlinkhover");
+			$(this).toggleClass("navbtnhover");
 		})
 	</script>
 	

@@ -13,7 +13,7 @@
 	
 	<div class="row">
 		
-		<div class="sidebar col-md-2 text-right">
+		<div class="sidebar col-sm-4 col-md-3 col-lg-2 order-sm-1 text-right">
 			<div>
 				<div class="card">
 					<div class="card-header">
@@ -31,7 +31,7 @@
 			</div>	
 		</div>
 		
-		<div class="col-md-10">
+		<div class=" col-sm-8 col-md-9 col-lg-10 order-sm-2">
 			<div id="content">
 				
 				<% if (items.length === 0) { %>
@@ -41,7 +41,7 @@
 				<div class="row">
 					<% items.forEach((item)=> { %>
 					
-							<div class="img-thumbnail text-center col-md-5 my-2 mx-3 <%if(item.bought===true){ %>
+							<div class="img-thumbnail text-center col-11 col-md-5 my-2 mx-2 <%if(item.bought===true){ %>
 										bought	
 										<% } %>">
 						

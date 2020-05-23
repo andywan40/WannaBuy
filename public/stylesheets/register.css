@@ -3,13 +3,15 @@ body, html {
   margin: 0;
 }
 
-h2, a, .registertext{
+h2, .registertext{
 	color:white;
 	text-shadow: 3px 3px 2px black;
 }
 
-a{
+.registertext a{
+	color:white;
 	text-decoration: underline;
+	text-shadow: 1px 1px 1px black;
 }
 
 .bg-img{
