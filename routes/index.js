@@ -34,8 +34,8 @@ router.post("/register", function(req, res){
 
 // LOGIN ROUTES
 //render login form
-router.get("/login", (req, res)=>{
-   res.render("login"); 
+router.get("/login", middleware.isLoggedInAtLogin, (req, res)=>{
+    res.render("login"); 
 });
 //login logic
 //middleware

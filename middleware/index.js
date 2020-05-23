@@ -36,5 +36,17 @@ middlewareObj.isLoggedIn = function(req, res, next){
     res.redirect("/login");
 };
 
+middlewareObj.isLoggedInAtLogin = function(req, res, next){
+    if(req.isAuthenticated()){
+        res.redirect("/list");
+    }else{
+		req.flash("primary", "Please Login or Sign up!")
+    	return next();
+	}
+	
+};
+
+
+
 
 module.exports = middlewareObj;
