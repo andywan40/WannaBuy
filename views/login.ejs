@@ -1,5 +1,121 @@
- <%- include("partials/header") %> 
-<div class="container text-center">
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WANNABUY</title>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+		<link rel="stylesheet" href="/stylesheets/register.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chelsea+Market&family=Patrick+Hand&family=Piedra&family=Yatra+One&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+		<script src="https://use.fontawesome.com/9881e4fe2f.js"></script>
+		
+	</head>
+	<body>
+	<div class="bg-img"></div>
+			
+	
+		
+		
+		
+		<!-- <nav class="navbar navbar-expand-md navbar-light bg-light">
+	  <a class="navbar-brand" href="/"><button class="btn btn-lg" id="brandBtn">WANNABUY</button></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+			<% if (!currentUser){ %>
+				<li class="nav-item">
+					<a class="nav-link mx-3" href="/login"><i class="fas fa-sign-in-alt"></i> Log in<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link mx-3" href="/register"><i class="fas fa-user-plus"></i> Sign up</a>
+				</li>
+			<% } else{ %>
+				<li class="nav-item">
+					<a class="nav-link mx-3" href="#"><i class="fas fa-sign-in-alt"></i> Logged in as <%= currentUser.username%></a>
+		  		</li>
+				<li class="nav-item">
+					<a class="nav-link mx-3" href="/logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
+		  		</li>
+				<li class="nav-item">
+					<a class="nav-link mx-3" href="/list"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+		  		</li>
+			<% }%>
+		  
+		  
+		</ul>
+		
+	  </div>
+	</nav> -->
+	<div  class="content">
+	
+		<div class="container mt-2">
+			<% if(error && error.length > 0){ %>
+				<div class="alert alert-danger" role="alert">
+					<%= error %>
+				</div>
+			<%	} %>
+
+			<% if(success && success.length > 0){ %>
+				<div class="alert alert-success" role="alert">
+					<%= success %>
+				</div>
+			<%	} %>
+			<% if(primary && primary.length > 0){ %>
+				<div class="alert alert-primary" role="alert">
+					<%= primary %>
+				</div>
+			<%	} %>
+		</div>
+
+		<!-- <script>
+			$(".nav-link").hover(function(){
+				$(this).toggleClass("navlinkhover");
+			}, function(){
+				$(this).toggleClass("navlinkhover");
+			})
+		</script> -->
+
+
+		<div class="container">
+
+				<div class="register-form mt-3 px-4 text-center">
+					<form action="/login" method="POST">
+						<h2 class="registertext">Login</h2>
+						<hr>
+						<div class="form-group registertext">
+							<div class="input-group">
+								<span class="input-group-icon rounded-left"><i class="fa fa-user mt-2"></i></span>
+								<input type="text" class="form-control rounded-right" name="username" placeholder="Username" required="required">
+							</div>
+						</div>
+						<div class="form-group registertext">
+							<div class="input-group">
+								<span class="input-group-icon rounded-left"><i class="fa fa-lock mt-2"></i></span>
+								<input type="password" class="form-control rounded-right" name="password" placeholder="Password" required="required">
+							</div>
+						</div>
+						<div class="form-group form-group-signup registertext">
+							<button type="submit" class="btn btn-primary btn-lg">Login</button>
+						</div>
+					</form>
+					<div class="text-center registertext">New here? <a href="/register">Sign Up here</a></div>
+
+		</div>
+	</div>	
+		
+<%- include("partials/footer") %>
+		
+		
+		
+		
+<!-- <div class="container text-center">
 	<h1 class="pagename mt-4">Welcome, Please Login!</h1>
 	<div class="row justify-content-center">
 		<div class="col-md-6">
@@ -12,9 +128,14 @@
 		</div>
 	</div>
 
-</div>
+</div> -->
 
 
 
 
-<%- include("partials/footer") %>
+
+
+
+
+
+

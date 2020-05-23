@@ -15,6 +15,8 @@
 		
 	</head>
 	<body>
+	<div class="bg-img"></div>
+			
 	
 		
 		
@@ -51,79 +53,79 @@
 		
 	  </div>
 	</nav> -->
-		
-	<div class="container mt-2">
-		<% if(error && error.length > 0){ %>
-			<div class="alert alert-danger" role="alert">
-				<%= error %>
-			</div>
-		<%	} %>
-
-		<% if(success && success.length > 0){ %>
-			<div class="alert alert-success" role="alert">
-				<%= success %>
-			</div>
-		<%	} %>
-		<% if(primary && primary.length > 0){ %>
-			<div class="alert alert-primary" role="alert">
-				<%= primary %>
-			</div>
-		<%	} %>
-	</div>
-		
-	<script>
-		$(".nav-link").hover(function(){
-			$(this).toggleClass("navlinkhover");
-		}, function(){
-			$(this).toggleClass("navlinkhover");
-		})
-	</script>
+	<div  class="content">
 	
+		<div class="container mt-2">
+			<% if(error && error.length > 0){ %>
+				<div class="alert alert-danger" role="alert">
+					<%= error %>
+				</div>
+			<%	} %>
 
+			<% if(success && success.length > 0){ %>
+				<div class="alert alert-success" role="alert">
+					<%= success %>
+				</div>
+			<%	} %>
+			<% if(primary && primary.length > 0){ %>
+				<div class="alert alert-primary" role="alert">
+					<%= primary %>
+				</div>
+			<%	} %>
+		</div>
 
-<div class="container">
-	
-			<div class="register-form mt-3 px-4 text-center">
-				<form action="/register" method="POST">
-					<h2 class="registertext">Sign Up</h2>
-					<hr>
-					<div class="form-group registertext">
-						<div class="input-group">
-							<span class="input-group-icon rounded-left"><i class="fa fa-user mt-2"></i></span>
-							<input type="text" class="form-control rounded-right" name="username" placeholder="Username" required="required">
+		<!-- <script>
+			$(".nav-link").hover(function(){
+				$(this).toggleClass("navlinkhover");
+			}, function(){
+				$(this).toggleClass("navlinkhover");
+			})
+		</script>
+ -->
+
+		<div class="container">
+
+				<div class="register-form mt-3 px-4 text-center">
+					<form action="/register" method="POST">
+						<h2 class="registertext">Sign Up</h2>
+						<hr>
+						<div class="form-group registertext">
+							<div class="input-group">
+								<span class="input-group-icon rounded-left"><i class="fa fa-user mt-2"></i></span>
+								<input type="text" class="form-control rounded-right" name="username" placeholder="Username" required="required">
+							</div>
 						</div>
-					</div>
-					<div class="form-group registertext">
-						<div class="input-group">
-							<span class="input-group-icon rounded-left"><i class="fa fa-paper-plane mt-2"></i></span>
-							<input type="email" class="form-control rounded-right" name="email" placeholder="Email Address" required="required">
+						<div class="form-group registertext">
+							<div class="input-group">
+								<span class="input-group-icon rounded-left"><i class="fa fa-paper-plane mt-2"></i></span>
+								<input type="email" class="form-control rounded-right" name="email" placeholder="Email Address" required="required">
+							</div>
 						</div>
-					</div>
-					<div class="form-group registertext">
-						<div class="input-group">
-							<span class="input-group-icon rounded-left"><i class="fa fa-lock mt-2"></i></span>
-							<input type="password" class="form-control rounded-right" name="password" placeholder="Password" required="required">
+						<div class="form-group registertext">
+							<div class="input-group">
+								<span class="input-group-icon rounded-left"><i class="fa fa-lock mt-2"></i></span>
+								<input type="password" class="form-control rounded-right" name="password" placeholder="Password" required="required">
+							</div>
 						</div>
-					</div>
-					<!-- <div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="fa fa-lock"></i>
-								<i class="fa fa-check"></i>
-							</span>
-							<input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+						<!-- <div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="fa fa-lock"></i>
+									<i class="fa fa-check"></i>
+								</span>
+								<input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+							</div>
+						</div> -->
+						<div class="form-group registertext">
+							<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
 						</div>
-					</div> -->
-					<div class="form-group registertext">
-						<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
-					</div>
-					<div class="form-group form-group-signup registertext">
-						<button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
-					</div>
-				</form>
-				<div class="text-center registertext">Already have an account? <a href="/login">Login here</a></div>
-			</div>
-		
-</div>
+						<div class="form-group form-group-signup registertext">
+							<button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+						</div>
+					</form>
+					<div class="text-center registertext">Already have an account? <a href="/login">Login here</a></div>
+
+		</div>
+	</div>	
 		
 <%- include("partials/footer") %>

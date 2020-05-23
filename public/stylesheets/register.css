@@ -1,10 +1,6 @@
-body{
-	background-image:url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
-	background-size:cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 100vh;
-
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
 h2, a, .registertext{
@@ -15,6 +11,34 @@ h2, a, .registertext{
 a{
 	text-decoration: underline;
 }
+
+.bg-img{
+	background-image:url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+	 /* Add the blur effect */
+  	filter: blur(4px);
+  	-webkit-filter: blur(4px);
+}
+
+.content{
+	/* background-color: rgb(0,0,0); /* Fallback color */ */
+	/* background-color: rgba(0,0,0, 0.4); */
+	/* Black w/opacity/see-through */
+	color: white;
+    font-weight: bold;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+}
+
 
 .register-form {
 	max-width:450px;
