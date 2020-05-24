@@ -129,7 +129,8 @@ router.put("/list/:id/bought", (req, res)=> {
 						res.redirect("back");
 					}else{
 						req.flash("success", "Successfully updated a new item!");
-						res.redirect("/list/" + req.params.id);
+						// res.redirect("/list/" + req.params.id);
+						res.redirect("/list");
 					}
 				});
 			}else{
@@ -138,7 +139,8 @@ router.put("/list/:id/bought", (req, res)=> {
 						res.redirect("back");
 					}else{
 						req.flash("success", "Successfully updated a new item!");
-						res.redirect("/list/" + req.params.id);
+						// res.redirect("/list/" + req.params.id);
+						res.redirect("/list");
 					}
 				});
 			};

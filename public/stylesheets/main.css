@@ -53,13 +53,14 @@
  .img-thumbnail{
 	width: 30%;
 	margin: 0 auto;
+	opacity:0.85;
 	
 }
 
 
  .bought{
 	color: grey;
-	opacity: 0.5;
+	opacity: 0.45;
 }
 
 
