@@ -27,15 +27,6 @@
 	text-shadow: 1px 1px 1px black;
 }
 
-/* #content{
-	margin-top: 20px;
-    width: 80%;
-    float: left;
-    position: relative;
-    z-index: 2;
-} */
-
-
 .navbtn{
 	background-color:black;
 	color: white;
@@ -53,10 +44,9 @@
  .img-thumbnail{
 	width: 30%;
 	margin: 0 auto;
-	opacity:0.85;
+	opacity:0.95;
 	
 }
-
 
  .bought{
 	color: grey;
@@ -102,8 +92,6 @@
 	
 }
 
-
-
 .sidebar{
 	opacity: 0.7;
 }
@@ -115,28 +103,38 @@
 	text-transform: uppercase;
 }
 
+.resize{
+	max-width:70%;
+	max-height:70%;
+}
+
+.smallpic{
+	max-width:15%;
+	max-height:15%;
+}
 
 body{
     /* background-color: rgb(244,239,241);
     background-color: radial-gradient(circle, rgba(244,239,241,1) 0%, rgba(238,174,202,1) 96%);	 */
 	background-image:url('https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
-	/* background-size:cover;
+	 background-size:cover;
 	background-repeat: no-repeat;
-	background-position: center; */
+	background-position: center; 
 }
 
 h1{
 	font-family: 'Bangers', cursive;	
 }
 
+input:focus{
+	border: 2.5px solid #2877f7 !important;
+}
+
 @media (max-width: 992px) {
     .sidebar a{
-	/* color:black;
-	font-family: 'Nanum Pen Script', cursive; */
 	font-size:20px;
-	/* text-transform: uppercase; */
 	}
-    
+	
 }
 
 
