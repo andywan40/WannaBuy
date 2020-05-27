@@ -1,5 +1,7 @@
 #desc{
 	font-family: 'Patrick Hand', cursive;
+	text-shadow: 1px 1px 1px #ced1d6;
+	font-size:20px;
 }
 
 #brandBtn {
@@ -10,9 +12,7 @@
 	padding: 3px 6px;
 }
 
-#edititem{
-	color:#007bff;
-}
+
 
 #addnewitem{
 	margin-left: 225px;
@@ -22,10 +22,15 @@
 	display: inline;
 }
 
+#favBtn{
+	display:inline;
+}
+
 #loginas{
 	color: white;
 	text-shadow: 1px 1px 1px black;
 }
+
 
 .navbtn{
 	background-color:black;
@@ -35,7 +40,9 @@
 .pagename {
 		text-shadow: 2px 2px 1px white;
 		color: black;
-	}
+}
+
+
 
 .deletebtn{
 	display: inline;
@@ -71,6 +78,7 @@
 
 .price {
 	color:#f05dce;
+	text-shadow: 2px 2px 2px black;
 }
 
 .login {
@@ -103,16 +111,26 @@
 	text-transform: uppercase;
 }
 
-.resize{
-	max-width:70%;
-	max-height:70%;
-}
+ .resize{
+	max-width:95%;
+	max-height:95%;
+} 
 
 .smallpic{
-	max-width:15%;
-	max-height:15%;
+	max-width:25%;
+	max-height:25%;
 }
 
+.fa-star{
+	color:#edd142;
+	font-size:25px;
+}
+
+
+button .fa-star{
+	color:#edd142;
+	font-size:20px;
+}
 body{
     /* background-color: rgb(244,239,241);
     background-color: radial-gradient(circle, rgba(244,239,241,1) 0%, rgba(238,174,202,1) 96%);	 */
@@ -128,6 +146,15 @@ h1{
 
 input:focus{
 	border: 2.5px solid #2877f7 !important;
+}
+
+a{
+	color: black;
+}
+
+a:hover{
+	text-decoration: underline:
+	color: white;
 }
 
 @media (max-width: 992px) {

@@ -12,7 +12,8 @@ const itemSchema = new mongoose.Schema ({
 	website: {type: String, default: '#' },
 	type: String,
 	author: String,
-	bought: {type: Boolean, default: false}
+	bought: {type: Boolean, default: false},
+	fav: {type: Boolean, default: false}
 });
 
 module.exports = mongoose.model("Item", itemSchema);

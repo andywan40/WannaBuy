@@ -149,6 +149,37 @@ router.put("/list/:id/bought", (req, res)=> {
 });
 
 
+//fav btn (can now click on fav btn again and undo it)
+router.put("/list/:id/fav", (req, res)=> {
+	Item.findById(req.params.id,(err, itemFound) =>{
+		if (err){
+			res.redirect("back");
+		}else{ //found the item
+			if(itemFound.fav === false){ //check if bought is false or true
+				Item.findByIdAndUpdate(req.params.id,{$set:{fav:true}}, (err, itemUpdated)=>{
+					if (err){
+						res.redirect("back");
+					}else{
+						req.flash("success", "Successfully updated a new item!");
+						// res.redirect("/list/" + req.params.id);
+						res.redirect("/list");
+					}
+				});
+			}else{
+				Item.findByIdAndUpdate(req.params.id,{$set:{fav:false}}, (err, itemUpdated)=>{
+					if (err){
+						res.redirect("back");
+					}else{
+						req.flash("success", "Successfully updated a new item!");
+						// res.redirect("/list/" + req.params.id);
+						res.redirect("/list");
+					}
+				});
+			};
+		}		
+	});
+});
+
 
 
 

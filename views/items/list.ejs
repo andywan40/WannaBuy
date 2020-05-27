@@ -55,6 +55,10 @@
 									</p>
 								</div>
 									<a href="/list/<%= item._id %>" class="btn btn-sm btn-primary mt-2 mb-3">More Info</a>
+									<% if(item.fav === true){ %>
+										<i class="px-2 fas fa-star"></i>
+									<% } %> 
+									
 							</div>
 					<% }) %>	
 	

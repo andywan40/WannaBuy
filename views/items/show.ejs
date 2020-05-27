@@ -18,9 +18,10 @@
 			<img id="thumb" class= "img-fluid resize" src="<%= item.front_image %>"> 
 		</a>
 	</div> -->
-	<div id="img-container" >
-        <img id="mainpic" src="<%=item.front_image%>" class="img-fluid resize">
+	<div id="img-container" style="width: 550px">
+        <img id="mainpic" src="<%=item.front_image%>" class="resize">
     <div>
+	
 	
 	<div class="my-3">
 		<img class="smallpic mx-2" src="<%= item.front_image %>">
@@ -47,6 +48,9 @@
 	<form  action="/list/<%=item._id%>/bought?_method=PUT" method="POST" id="boughtBtn">
 		<button class ="btn btn-primary btn-sm my-3 mx-1">Bought</button>
 	</form>
+	<form  action="/list/<%=item._id%>/fav?_method=PUT" method="POST" id="favBtn">
+		<button class ="btn btn-dark btn-sm my-3 mx-1"><i class="fas fa-star"></i></button>
+	</form>
 	
 	
 
@@ -55,23 +59,29 @@
 	</div>
 </div>
 
- <!-- <script>
+ <script>
 	var options = {
-		"scale": 100;
-		"offset":{"vertical":0,"horizontal":10},
-		"zoomPosition":"original"
-	}
-		new ImageZoom(document.getElementById("img-container"), options);
+		width:500,
+		zoomWidth: 310,
+		offset: {vertical: 0, horizontal: 35},
+		zoomLensStyle:'opacity: 1;'
 		
-</script> -->
+	};
+		new ImageZoom(document.getElementById("img-container"), options);
+	
+		
+</script>
 
 <script>
-	
 		$(".smallpic").on("click", function(){
 			$("#mainpic").attr("src", $(this).attr("src") );
+			new ImageZoom(document.getElementById("img-container"), options);
+			  
 		});
 	
 </script>
+
+
 	
 	
 
