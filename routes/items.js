@@ -130,10 +130,12 @@ router.put("/list/:id/bought", (req, res)=> {
 				Item.findByIdAndUpdate(req.params.id,{$set:{bought:true}}, (err, itemUpdated)=>{
 					if (err){
 						res.redirect("back");
+						
 					}else{
 						req.flash("success", "Successfully updated a new item!");
 						// res.redirect("/list/" + req.params.id);
 						res.redirect("/list");
+						
 					}
 				});
 			}else{
