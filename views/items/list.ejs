@@ -39,20 +39,26 @@
 				<% } %>
 				
 				<div class="row">
-					<% items.forEach((item)=> { %>
+					<% items.forEach( item => { %>
 					
 							<div class="img-thumbnail text-center col-11 col-md-5 my-2 mx-2 <%if(item.bought===true){ %>
 										bought	
 										<% } %>">
 						
 								<img src="<%=item.front_image%>" class="img-fluid">
-								<div class="caption top">
-									<p class>
-										<strong><%= item.name %> - <span class="price"><%= item.retail %></span></strong>
+								<div class="top mt-4">
+									<p class="itemName">
+										<%= item.name %>
+									</p>
+									<p>
+										<%= item.color %>
 									</p>
 									<p class="mt-0">
 										<%= item.brand %>/<%= item.year %>
 									</p>
+									<p class="price">
+										<%= item.retail %>
+									</p> 
 								</div>
 									<a href="/list/<%= item._id %>" class="btn btn-sm btn-primary mt-2 mb-3">More Info</a>
 									<% if(item.fav === true){ %>
@@ -69,7 +75,6 @@
 	</div>
 		
 
-	
 	<div id="addnewitem">
 			<a href="/list/new" class="btn btn-lg btn-primary mt-3 mb-3">Add New Item</a>
 	</div>

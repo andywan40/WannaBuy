@@ -12,6 +12,7 @@
 			<div>
 				<form action="/list/<%=item._id%>?_method=PUT" method="POST">
 					<input type="text" name="item[name]" value="<%=item.name%>" class="form-control rounded my-2 shadow-sm">
+					<input type="text" name="item[color]"  value="<%=item.color%>" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="item[brand]" value="<%=item.brand%>" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="item[year]" value="<%=item.year%>" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="item[retail]" value="<%=item.retail%>" class="form-control rounded my-2 shadow-sm">
@@ -19,8 +20,8 @@
 					<input type="text" name="item[front_image]" value="<%=item.front_image%>" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="item[back_image]" value="<%=item.back_image%>" class="form-control rounded my-2 shadow-sm">
 					<input type="text" name="item[website]" value="<%=item.website%>" class="form-control rounded my-2 shadow-sm">
-					<select class="custom-select form-control rounded my-0 shadow-sm" name="item[type]" required>
-						<option selected disabled value="">Choose...</option>
+					<select class="custom-select form-control rounded my-0 shadow-sm" name="item[type]" value="<%=item.type%>" required>
+						<option disabled value="">Choose...</option>
 						<option value="outwear">Outwear</option>
 						<option value="tops">Tops</option>
 						<option value="bottoms">Bottoms</option>

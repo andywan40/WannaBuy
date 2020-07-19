@@ -31,10 +31,13 @@
 	text-shadow: 1px 1px 1px black;
 }
 
+.navbar{
+ background-color: black;	
+}
 
 .navbtn{
 	background-color:black;
-	color: white;
+	color: white !important;
 }
 
 .pagename {
@@ -52,6 +55,10 @@
 	width: 30%;
 	margin: 0 auto;
 	opacity:0.95;
+	box-shadow: 2px 2px 2px black;
+	background-color: #ebebeb;
+	
+}
 	
 }
 
@@ -71,16 +78,24 @@
 }
 
 .top{
-	font-family: 'Bangers', cursive;
-	letter-spacing: 1px;
-	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 1.2rem;
+    letter-spacing: 0.03em;
+	color: #7a7979;
+	
+	
+}
+.top .itemName{
+	font-weight: 800;
+	color:black;
 }
 
-.price {
-	color:#f05dce;
-	text-shadow: 2px 2px 2px black;
+/* .price {
+	color:#807f7d;
+	
 }
-
+ */
 .login {
 	width: 90px;
 }
@@ -134,10 +149,11 @@ button .fa-star{
 body{
     /* background-color: rgb(244,239,241);
     background-color: radial-gradient(circle, rgba(244,239,241,1) 0%, rgba(238,174,202,1) 96%);	 */
-	background-image:url('https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+	/* background-image:url('https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
 	 background-size:cover;
 	background-repeat: no-repeat;
-	background-position: center; 
+	background-position: center;  */
+	background-color: white;
 }
 
 h1{

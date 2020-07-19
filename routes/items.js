@@ -9,7 +9,7 @@ router.get("/list",middleware.isLoggedIn,  function(req, res){
 	//finds all the items that are associated with the user and shows them
 	Item.find({author: req.user.username},function(err, itemsFound){
 		if (err || !itemsFound){
-			console.log(err)
+			req.flash("error", "Cannot find items!");
 			res.redirect("home")
 		}else{
 			res.render("items/list", {items:itemsFound})
@@ -18,11 +18,12 @@ router.get("/list",middleware.isLoggedIn,  function(req, res){
 })
 
 router.get("/list/c/:category",middleware.isLoggedIn,  function(req, res){
-	//finds all the items that are associated with the user and shows them
-	
+	//finds all the items that are associated with the user under the category and shows them
+	console.log(req, res);
 	Item.find({author: req.user.username, type:req.params.category},function(err, itemsFound){
 		if (err || !itemsFound){
 			console.log(err)
+			req.flash("error", "Cannot find items!");
 			res.redirect("back")
 		}else{
 			res.render("items/list", {items:itemsFound})
@@ -47,6 +48,7 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 	//get data from form and add it to database;
 	//redirect back to "/list"
 	const name = req.body.name;
+	const color = req.body.color;
 	const brand = req.body.brand;
 	const year = req.body.year;
 	const retail = req.body.retail;
@@ -58,6 +60,7 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 	const author = req.user.username;
 	const obj = {
 		name: name,
+		color: color,
 		brand: brand,
 		year: year,
 		retail: retail, 
@@ -70,7 +73,7 @@ router.post("/list",middleware.isLoggedIn, function(req, res){
 	}
 	Item.create(obj, function(err, itemCreated){
 		if (err){
-			console.log(err);
+			req.flash("error", "Cannot create an item!");
 		}else {
 			req.flash("success", "Successfully created a new item!");
 			res.redirect("/list");

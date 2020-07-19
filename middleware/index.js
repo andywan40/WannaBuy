@@ -41,8 +41,7 @@ middlewareObj.isLoggedInAtLogin = function(req, res, next){
         res.redirect("/list");
     }else{
     	return next();
-	}
-	
+	}	
 };
 
 
